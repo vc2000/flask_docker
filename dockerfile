@@ -6,3 +6,12 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 CMD ["python","app.py"]
+
+#FROM python:3.4-alpine
+#MAINTAINER Venus Chau "venuschau406@gmail.com"
+#ADD . /code
+#WORKDIR /code
+#RUN pip install -r requirements.txt
+#CMD ["python", "app.py"]
+
+#EXPOSE 5000
