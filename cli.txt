@@ -27,6 +27,9 @@ docker-machine env aws-sandbox
 
 docker-compose -f docker-compose.yml up -d --build
 
+#url
+http://0.0.0.0:5000/
+
 #check ip address
 docker-machine ip aws-sandbox
 
