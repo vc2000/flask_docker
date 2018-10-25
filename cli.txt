@@ -25,10 +25,15 @@ docker-machine create --driver amazonec2 aws-sandbox
 
 docker-machine env aws-sandbox
 
+eval $(docker-machine env aws-sand)
+
 docker-compose -f docker-compose.yml up -d --build
 
-#url
+#local url
 http://0.0.0.0:5000/
+
+# IPv4 Public IP + 5000  # need to setup security group !
+http://52.90.95.200:5000/
 
 #check ip address
 docker-machine ip aws-sandbox
