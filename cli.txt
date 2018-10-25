@@ -23,6 +23,13 @@ docker rmi $(docker images -q)
 # Launch ec2 instance
 docker-machine create --driver amazonec2 aws-sandbox
 
+docker-machine env aws-sandbox
+
+docker-compose -f docker-compose.yml up -d --build
+
+#check ip address
+docker-machine ip aws-sandbox
+
 #check
 docker-machine ls
 
